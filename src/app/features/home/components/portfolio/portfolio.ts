@@ -11,9 +11,9 @@ import { Project } from '../../../../core/models/project.model';
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="flex flex-col gap-4 mb-16">
           <span class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-fixed-variant uppercase">
-            // Selected Architecture
+             Selected Architecture
           </span>
-          <h2 class="font-headline-lg text-headline-lg font-bold text-primary dark:text-on-primary">
+          <h2 class="font-headline-lg text-headline-lg font-bold text-primary ">
             Featured Custom Engineering
           </h2>
         </div>
@@ -22,12 +22,12 @@ import { Project } from '../../../../core/models/project.model';
           <div *ngFor="let project of projects" class="bg-surface-container-lowest border border-outline-variant p-8 rounded-lg hover:border-outline transition-all duration-300 flex flex-col justify-between">
             <div>
               <span class="font-label-caps text-xs text-outline uppercase tracking-wider block mb-2">{{ project.category }}</span>
-              <h3 class="font-headline-md text-headline-md font-semibold text-primary dark:text-on-primary mb-3">{{ project.title }}</h3>
+              <h3 class="font-headline-md text-headline-md font-semibold text-primary  mb-3">{{ project.title }}</h3>
               <p class="font-body-md text-body-md text-on-surface-variant mb-6">{{ project.description }}</p>
               
               <div class="bg-surface-container p-4 rounded mb-6 border border-outline-variant">
                 <span class="font-label-caps text-xs text-outline block mb-1">KEY IMPACT</span>
-                <span class="font-headline-md text-sm font-bold text-primary dark:text-on-primary">{{ project.metrics }}</span>
+                <span class="font-headline-md text-sm font-bold text-primary ">{{ project.metrics }}</span>
               </div>
             </div>
 

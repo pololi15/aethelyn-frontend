@@ -22,7 +22,7 @@ import { ContactComponent } from './features/home/components/contact/contact';
   ],
   template: `
     <app-navbar></app-navbar>
-    <main>
+    <main class="space-y-20 md:space-y-32 pt-20">
       <app-hero></app-hero>
       <app-proof></app-proof>
       <app-services></app-services>

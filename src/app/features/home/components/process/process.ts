@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="flex flex-col gap-4 mb-16">
           <span class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-fixed-variant uppercase">
-            // Agile Methodology
+             Agile Methodology
           </span>
-          <h2 class="font-headline-lg text-headline-lg font-bold text-primary dark:text-on-primary">
+          <h2 class="font-headline-lg text-headline-lg font-bold text-primary ">
             Human-Centric Engineering Workflow
           </h2>
         </div>
@@ -20,7 +20,7 @@ import { CommonModule } from '@angular/common';
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div *ngFor="let step of steps" class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant relative">
             <span class="font-label-caps text-xs text-outline block mb-4">{{ step.number }}</span>
-            <h3 class="font-headline-md text-headline-md font-semibold text-primary dark:text-on-primary mb-2">{{ step.title }}</h3>
+            <h3 class="font-headline-md text-headline-md font-semibold text-primary  mb-2">{{ step.title }}</h3>
             <p class="font-body-md text-body-md text-on-surface-variant text-sm">{{ step.description }}</p>
           </div>
         </div>

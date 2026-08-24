@@ -11,9 +11,9 @@ import { ServiceItem } from '../../../../core/models/project.model';
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="flex flex-col gap-4 mb-16">
           <span class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-fixed-variant uppercase">
-            // Core Capabilities
+             Core Capabilities
           </span>
-          <h2 class="font-headline-lg text-headline-lg font-bold text-primary dark:text-on-primary">
+          <h2 class="font-headline-lg text-headline-lg font-bold text-primary ">
             Precision Software Engineering
           </h2>
         </div>
@@ -22,7 +22,7 @@ import { ServiceItem } from '../../../../core/models/project.model';
           <div *ngFor="let service of services" class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant flex flex-col justify-between">
             <div>
               <span class="material-symbols-outlined text-primary text-4xl mb-6 block">{{ service.icon }}</span>
-              <h3 class="font-headline-md text-headline-md font-semibold text-primary dark:text-on-primary mb-4">{{ service.title }}</h3>
+              <h3 class="font-headline-md text-headline-md font-semibold text-primary  mb-4">{{ service.title }}</h3>
               <p class="font-body-md text-body-md text-on-surface-variant mb-6">{{ service.description }}</p>
             </div>
 
