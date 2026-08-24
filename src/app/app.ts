@@ -1,11 +1,36 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { Navbar } from './shared/components/navbar/navbar';
+import { Footer } from './shared/components/footer/footer';
+import { Hero } from './features/home/components/hero/hero';
+import { Proof } from './features/home/components/proof/proof';
+import { PortfolioComponent } from './features/home/components/portfolio/portfolio';
+import { ServicesComponent } from './features/home/components/services/services';
+import { ProcessComponent } from './features/home/components/process/process';
+import { ContactComponent } from './features/home/components/contact/contact';
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  imports: [
+    Navbar,
+    Hero,
+    Proof,
+    ServicesComponent,
+    PortfolioComponent,
+    ProcessComponent,
+    ContactComponent,
+    Footer
+  ],
+  template: `
+    <app-navbar></app-navbar>
+    <main>
+      <app-hero></app-hero>
+      <app-proof></app-proof>
+      <app-services></app-services>
+      <app-portfolio></app-portfolio>
+      <app-process></app-process>
+      <app-contact></app-contact>
+    </main>
+    <app-footer></app-footer>
+  `
 })
-export class App {
-  protected readonly title = signal('aethelyn-frontend');
-}
+export class AppComponent {}
