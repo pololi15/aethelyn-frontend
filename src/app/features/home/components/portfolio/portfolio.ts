@@ -21,6 +21,11 @@ import { Project } from '../../../../core/models/project.model';
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div *ngFor="let project of projects" class="bg-surface-container-lowest border border-outline-variant p-8 rounded-lg hover:border-outline transition-all duration-300 flex flex-col justify-between">
             <div>
+              <img
+                [src]="project.imageUrl"
+                [alt]="project.title"
+                class="w-full h-48 object-cover rounded mb-6 border border-outline-variant"
+              />
               <span class="font-label-caps text-xs text-outline uppercase tracking-wider block mb-2">{{ project.category }}</span>
               <h3 class="font-headline-md text-headline-md font-semibold text-primary  mb-3">{{ project.title }}</h3>
               <p class="font-body-md text-body-md text-on-surface-variant mb-6">{{ project.description }}</p>
@@ -51,7 +56,7 @@ export class PortfolioComponent {
       description: 'Real-time telemetry and supply chain routing engine handling high-throughput operations.',
       tags: ['Angular', 'Go', 'Microservices'],
       metrics: '+40% operational efficiency',
-      imageUrl: ''
+      imageUrl: '/assets/unnamed1.jpg'
     },
     {
       id: '2',
@@ -60,7 +65,7 @@ export class PortfolioComponent {
       description: 'Bank-grade transaction orchestration system built with sub-millisecond response guarantees.',
       tags: ['TypeScript', 'Node.js', 'PostgreSQL'],
       metrics: 'Zero-downtime migration',
-      imageUrl: ''
+      imageUrl: '/assets/unnamed2.jpg'
     },
     {
       id: '3',
@@ -69,7 +74,7 @@ export class PortfolioComponent {
       description: 'Event-driven automation platform for complex enterprise document pipelines.',
       tags: ['Python', 'Kafka', 'Docker'],
       metrics: '10M+ events processed/day',
-      imageUrl: ''
+      imageUrl: '/assets/unnamed3.jpg'
     }
   ];
 }
