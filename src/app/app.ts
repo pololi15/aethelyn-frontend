@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Navbar } from './shared/components/navbar/navbar';
 import { Footer } from './shared/components/footer/footer';
 import { Hero } from './features/home/components/hero/hero';
@@ -20,17 +20,7 @@ import { ContactComponent } from './features/home/components/contact/contact';
     ContactComponent,
     Footer
   ],
-  template: `
-    <app-navbar></app-navbar>
-    <main class="space-y-20 md:space-y-32 pt-20">
-      <app-hero></app-hero>
-      <app-proof></app-proof>
-      <app-services></app-services>
-      <app-portfolio></app-portfolio>
-      <app-process></app-process>
-      <app-contact></app-contact>
-    </main>
-    <app-footer></app-footer>
-  `
+  template: `<app-navbar /><main id="top"><app-hero /><app-proof /><app-services /><app-portfolio /><app-process /><app-contact /></main><app-footer />`,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {}

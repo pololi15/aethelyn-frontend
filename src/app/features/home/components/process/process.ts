@@ -1,10 +1,7 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-process',
-  standalone: true,
-  imports: [CommonModule],
   template: `
     <section id="process" class="py-section-gap bg-surface">
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -18,15 +15,16 @@ import { CommonModule } from '@angular/common';
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div *ngFor="let step of steps" class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant relative">
+          @for (step of steps; track step.number) {<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant relative card-hover">
             <span class="font-label-caps text-xs text-outline block mb-4">{{ step.number }}</span>
             <h3 class="font-headline-md text-headline-md font-semibold text-primary  mb-2">{{ step.title }}</h3>
             <p class="font-body-md text-body-md text-on-surface-variant text-sm">{{ step.description }}</p>
-          </div>
+          </div>}
         </div>
       </div>
     </section>
-  `
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProcessComponent {
   steps = [

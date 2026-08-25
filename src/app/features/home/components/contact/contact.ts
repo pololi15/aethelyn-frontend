@@ -12,6 +12,7 @@ import { Component } from '@angular/core';
               <span class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-fixed-variant uppercase block mb-4">
                  Initiate Engineering
               </span>
+              <div id="about" class="eyebrow mb-4">Built for ownership, not lock-in</div>
               <h2 class="font-headline-lg text-headline-lg font-bold text-primary  mb-6">
                 Ready to build software tailored to your exact needs?
               </h2>
@@ -32,18 +33,18 @@ import { Component } from '@angular/core';
             <form class="space-y-6" (submit)="$event.preventDefault()">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label class="font-label-caps text-xs text-on-surface-variant uppercase block mb-2">Your Name</label>
-                  <input type="text" placeholder="John Doe" class="w-full bg-surface border border-outline-variant p-3 rounded text-primary focus:border-primary focus:outline-none font-body-md"/>
+                  <label for="name" class="font-label-caps text-xs text-on-surface-variant uppercase block mb-2">Your Name</label>
+                  <input id="name" type="text" autocomplete="name" placeholder="John Doe" class="w-full bg-surface border border-outline-variant p-3 rounded text-primary focus:border-primary focus:outline-none font-body-md"/>
                 </div>
                 <div>
-                  <label class="font-label-caps text-xs text-on-surface-variant uppercase block mb-2">Work Email</label>
-                  <input type="email" placeholder="john@company.com" class="w-full bg-surface border border-outline-variant p-3 rounded text-primary focus:border-primary focus:outline-none font-body-md"/>
+                  <label for="email" class="font-label-caps text-xs text-on-surface-variant uppercase block mb-2">Work Email</label>
+                  <input id="email" type="email" autocomplete="email" placeholder="john@company.com" class="w-full bg-surface border border-outline-variant p-3 rounded text-primary focus:border-primary focus:outline-none font-body-md"/>
                 </div>
               </div>
 
               <div>
-                <label class="font-label-caps text-xs text-on-surface-variant uppercase block mb-2">Estimated Budget Range</label>
-                <select class="w-full bg-surface border border-outline-variant p-3 rounded text-primary focus:border-primary focus:outline-none font-body-md">
+                <label for="budget" class="font-label-caps text-xs text-on-surface-variant uppercase block mb-2">Estimated Budget Range</label>
+                <select id="budget" class="w-full bg-surface border border-outline-variant p-3 rounded text-primary focus:border-primary focus:outline-none font-body-md">
                   <option>$10k - $25k</option>
                   <option>$25k - $50k</option>
                   <option>$50k+</option>
@@ -51,8 +52,8 @@ import { Component } from '@angular/core';
               </div>
 
               <div>
-                <label class="font-label-caps text-xs text-on-surface-variant uppercase block mb-2">Project Brief</label>
-                <textarea rows="4" placeholder="Describe the core problem or requirements..." class="w-full bg-surface border border-outline-variant p-3 rounded text-primary focus:border-primary focus:outline-none font-body-md"></textarea>
+                <label for="brief" class="font-label-caps text-xs text-on-surface-variant uppercase block mb-2">Project Brief</label>
+                <textarea id="brief" rows="4" placeholder="Describe the core problem or requirements..." class="w-full bg-surface border border-outline-variant p-3 rounded text-primary focus:border-primary focus:outline-none font-body-md"></textarea>
               </div>
 
               <button type="submit" class="w-full bg-primary text-on-primary py-4 rounded font-label-caps uppercase text-label-caps tracking-wider hover:bg-opacity-90 transition-all active:scale-98">
